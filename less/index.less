@@ -57,3 +57,40 @@ html, body {
     height: 100%;
 }
 
+// @nav-a-padding: 10px;
+
+// @nav-a-margin: 20px;
+
+// @nav-a-color: gray;
+
+// .nav a {
+// 	padding: @nav-padding;
+// 	margin: @nav-margin;
+// 	color: @nav-color;
+// 	}
+
+.bordered {
+	border-top: solid 2px gray;
+	border-bottom: solid 2px gray;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	
+	// .header {}
+
+	.nav {
+		.nav a {
+			color: gray;
+			.bordered();
+		}
+	}
+
+	// .footer {
+	// 	.nav {
+	// 		.nav();	
+	// 	}
+	// }
+	
+}

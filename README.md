@@ -18,6 +18,7 @@ Follow these steps for completing your project.
 - [ ] Add your project manager as a reviewer on the pull-request
 - [ ] Your project manager will count the project as complete by merging the branch back into master.
 
+
 ## Task 2: Set up your preprocessor
 * [ ] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
 * [ ] Open your terminal and navigate to your preprocessing project by using the `cd` command
