@@ -157,11 +157,11 @@ body {
     justify-content: center;
     align-content: center;
     text-align: center;
-    background-color: lightcyan;
+    background-color: #f5a6a6;
   }
 }
 .container header nav a {
-  color: #555050;
+  color: #423f3f;
   justify-content: space-evenly;
   align-content: center;
   margin: 0;
@@ -171,7 +171,7 @@ body {
 .container header .top {
   width: 100%;
   height: 440px;
-  background-color: #ebdccb;
+  background-color: #d6c7b3;
   border-top: 2px solid black;
   border-right: 2px solid black;
   border-left: 2px solid black;
@@ -188,11 +188,12 @@ body {
   margin-left: 40px;
   padding: 10px;
   border: 2px solid black;
-  background-color: #cab69c;
+  background-color: #bea585;
 }
 .container header .top .top-box .top-text {
   margin-top: 120px;
   margin-right: 290px;
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
 .container header .top .about {
   margin-left: 20px;
@@ -224,6 +225,8 @@ body {
 }
 .container header .top-content .intro-text {
   font-size: 1.1em;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-style: regular;
   padding-top: 20px;
   padding-right: 35px;
   padding-bottom: 10px;
@@ -232,7 +235,7 @@ body {
 .container .middle-content {
   width: 100%;
   height: 430px;
-  background-color: #7e6b55;
+  background-color: #bea585;
   border-right: 2px solid black;
   border-left: 2px solid black;
 }
@@ -288,7 +291,7 @@ body {
   padding-left: 20px;
   display: flex;
   flex-flow: column wrap;
-  background-color: #7e6b55;
+  background-color: #bea585;
   width: 100%;
   height: 160px;
   margin-bottom: 10px;
@@ -313,7 +316,7 @@ body {
   padding-left: 20px;
   width: 100%;
   height: 170px;
-  background-color: #ebdccb;
+  background-color: #d6c7b3;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
@@ -340,11 +343,11 @@ body {
     justify-content: center;
     align-content: center;
     text-align: center;
-    background-color: lightcyan;
+    background-color: #f5a6a6;
   }
 }
 .container footer nav a {
-  color: #555050;
+  color: #423f3f;
   justify-content: space-evenly;
   align-content: center;
   margin: 0;
