@@ -61,9 +61,19 @@ html, body {
 
 @nav-margin: 20px;
 
+@background-color-coral: rgb(245, 166, 166);
+
+@background-color-teal: rgb(129, 253, 247);
+
+@background-color-light: rgb(235, 220, 203);
+
+@background-color-medium: rgb(202, 182, 156);
+
+@background-color-dark: rgb(126, 107, 85);
+
 .bordered() {
-	border-top: solid 2px gray;
-	border-bottom: solid 2px gray;
+	border-top: solid 2px rgb(85, 80, 80);;
+	border-bottom: solid 2px rgb(85, 80, 80);;
 }
 
 .nav() {
@@ -77,9 +87,10 @@ html, body {
 }
 
 .a() {
-	color: gray;
+	color:rgb(85, 80, 80);
 	justify-content: space-evenly;
 	align-content: center;
+	margin: 0;
 	padding-right: 20px;
 	padding-left: 20px;
 }
@@ -112,7 +123,7 @@ html, body {
 				justify-content: center;
 				align-content: center;
 				text-align: center;
-				background-color: red;
+				background-color:lightcyan;
 			}
 
 			.nav();
@@ -126,8 +137,10 @@ html, body {
 	.top {
 		width: 100%;
 		height: 440px;
-		background-color: lightcoral;
-		// border: 2px dashed black;
+		background-color: @background-color-light;
+		border-top: 2px solid black;
+		border-right: 2px solid black;
+		border-left: 2px solid black;
 
 		.top-box {
 			display: flex;
@@ -141,6 +154,7 @@ html, body {
 				margin-left: 40px;
 				padding: 10px;
 				border: 2px solid black;
+				background-color: @background-color-medium;
 			}
 
 			.top-text {
@@ -164,9 +178,9 @@ html, body {
 	.top-content {
 		width: 100%;
 		height: 160px;
-		background-color: rgb(221, 185, 141);
-		// margin-bottom: 10px;
-		// border: 2px dashed black;
+		background-color: @background-color-medium;
+		border-right: 2px solid black;
+		border-left: 2px solid black;
 		
 		.intro {
 			.heading();
@@ -185,9 +199,9 @@ html, body {
 	.middle-content {
 		width: 100%;
 		height: 430px;
-		background-color: rgb(250, 209, 159);
-		// margin-bottom: 15px;
-		// border: 2px dashed black;
+		background-color: @background-color-dark;
+		border-right: 2px solid black;
+		border-left: 2px solid black;
 
 		.qual {
 			.heading();
@@ -200,7 +214,7 @@ html, body {
 				font-size: 0.8em;
 
 				.lang {
-					background-color: rgb(101, 207, 202);
+					background-color: @background-color-coral;
 					width: 45%;
 					height: 170px;
 					margin-top: 10px;
@@ -215,7 +229,7 @@ html, body {
 				}
 
 				.skills {
-					background-color: rgb(101, 207, 202);
+					background-color: @background-color-coral;
 					width: 45%;
 					height: 170px;
 					margin-top: 10px;
@@ -235,14 +249,14 @@ html, body {
 			.heading();
 			display: flex;
 			flex-flow: column wrap;
-			background-color:  rgb(250, 209, 159);
+			background-color: @background-color-dark;
 			width: 100%;
 			height: 160px;
 			margin-bottom: 10px;
 
 			.exper-text {
 				font-size: 0.7em;
-				background-color:  rgb(101, 207, 202);
+				background-color:  @background-color-coral;
 				height: 200px;
 				width: 85%;
 				margin-top: 5px;
@@ -261,8 +275,10 @@ html, body {
 			
 			width: 100%;
 			height: 170px;
-			background-color:rgb(221, 185, 141);
-			// border: 2px dashed black;
+			background-color: @background-color-light;
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+			border-left: 2px solid black;
 
 			.contact-text {
 				font-size: 0.8em;
@@ -280,7 +296,7 @@ html, body {
 				justify-content: center;
 				align-content: center;
 				text-align: center;
-				background-color: red;
+				background-color: lightcyan;
 			}
 
 			.nav();
