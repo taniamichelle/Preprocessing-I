@@ -57,3 +57,277 @@ html, body {
     height: 100%;
 }
 
+//variables
+@nav-padding: 10px;
+
+@nav-margin: 20px;
+
+@background-color-coral: rgb(245, 166, 166);
+
+@background-color: rgb(202, 182, 156);
+@darken-background: darken(@background-color, 7%);
+@lighten-background: lighten(@background-color, 7%); 
+
+// @background-color-light: rgb(235, 220, 203);
+
+// @background-color-medium: rgb(202, 182, 156);
+
+// @background-color-dark: rgb(126, 107, 85);
+
+//mixins
+.bordered() {
+	border-top: solid 2px rgb(85, 80, 80);;
+	border-bottom: solid 2px rgb(85, 80, 80);;
+}
+
+.nav() {
+	font-size: 1.3em;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	display: flex;
+	flex-flow: row wrap;
+	padding: @nav-padding;
+	margin: @nav-margin;
+	.bordered();
+	width: 64.5%;
+}
+
+.a() {
+	color:rgb(66, 63, 63);
+	justify-content: space-evenly;
+	align-content: center;
+	margin: 0;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.heading() {
+	font-size: 1.7em;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-style: black;
+	padding-top: 16px;
+	padding-left: 20px;
+}
+
+.ul() {
+	font-size: 0.8em;
+	padding-left: 60px;
+	list-style-type: circle;
+}
+
+//parametric mixin 
+.custom-layout(@j: center, @a: center) {
+	display: flex;
+	justify-content: @j;
+	align-items: @a;
+}
+
+.custom-dimensions(@w: 100%, @h: 500px) {
+	width: @w;
+	height: @h;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	
+	@media (max-width: 500px) {
+	}	
+	
+	header {
+		nav {
+			@media (max-width: 500px) {
+				width: 440px;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-content: center;
+				text-align: center;
+				background-color: @background-color-coral;
+			}
+
+			.nav();
+
+			a {
+				.a();
+			
+			}
+		}	
+		
+	.top {
+		width: 100%;
+		height: 440px;
+		background-color: @lighten-background;
+		border-top: 2px solid black;
+		border-right: 2px solid black;
+		border-left: 2px solid black;
+
+		.top-box {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			font-size: 3.75em;
+		
+			.headshot {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				margin-left: 40px;
+				padding: 10px;
+				border: 2px solid black;
+				background-color: @darken-background;
+			}
+
+			.top-text {
+				margin-top: 120px;
+				margin-right: 290px;
+				font-family: 'Alegreya Sans SC', sans-serif;
+			}
+		}
+
+		.about {
+			margin-left: 20px;
+			.heading();
+		}
+
+		.about-text {
+			margin: 40px;
+			font-size: 1.2em;
+			font-family: 'Alegreya Sans SC', sans-serif;
+			font-style: regular;
+		}
+		
+	}
+
+	.top-content {
+		width: 100%;
+		height: 160px;
+		background-color: @background-color;
+		border-right: 2px solid black;
+		border-left: 2px solid black;
+		
+		.intro {
+			.heading();
+		}
+
+		.intro-text {
+			font-size: 1.1em;
+			font-family: 'Alegreya Sans SC', sans-serif;
+			font-style: regular;
+			padding-top: 20px;
+			padding-right: 35px;
+			padding-bottom: 10px;
+			padding-left: 35px;
+		}
+	}
+	}
+
+	.middle-content {
+		width: 100%;
+		height: 430px;
+		background-color: @darken-background;
+		border-right: 2px solid black;
+		border-left: 2px solid black;
+
+		.qual {
+			.heading();
+
+			.qual-text {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-content: center;
+				font-size: 0.8em;
+
+				.lang {
+					background-color: @background-color-coral;
+					width: 45%;
+					height: 170px;
+					margin-top: 10px;
+					margin-bottom: 20px;
+					margin-left: 15px;
+					padding-top: 15px;
+					padding-left: 80px;
+
+					ul {
+						.ul();
+					}
+				}
+
+				.skills {
+					background-color: @background-color-coral;
+					width: 45%;
+					height: 170px;
+					margin-top: 10px;
+					margin-right: 45px;
+					padding-top: 20px;
+					margin-bottom: 15px;
+					padding-left: 100px;
+
+					ul {
+						.ul();
+					}
+				}
+			}	
+		}
+
+		.experience {
+			.heading();
+			display: flex;
+			flex-flow: column wrap;
+			background-color: @darken-background;
+			width: 100%;
+			height: 160px;
+			margin-bottom: 10px;
+
+			.exper-text {
+				font-size: 0.7em;
+				background-color:  @background-color-coral;
+				height: 200px;
+				width: 85%;
+				margin-top: 5px;
+				margin-right: 30px;
+				margin-bottom: 15px;
+				margin-left: 20px;
+				padding-top: 15px;
+				padding-left: 25px;
+			}
+		}
+	}
+
+	.bottom-content {
+		.contact {
+			.heading();
+			
+			width: 100%;
+			height: 170px;
+			background-color: @lighten-background;
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+			border-left: 2px solid black;
+
+			.contact-text {
+				font-size: 0.8em;
+				padding-left: 160px;
+			}
+		}
+		
+	}
+
+	footer {
+		nav {
+			@media (max-width: 500px) {
+				width: 440px;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				text-align: center;
+				background-color: @background-color-coral;
+			}
+
+			.nav();
+
+			a {
+				.a();
+			}
+		}
+	}
+}
